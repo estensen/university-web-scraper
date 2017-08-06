@@ -15,10 +15,3 @@ class AmericanUniversitiesSpider(scrapy.Spider):
             tds = tr.css("td")
             if tds and tds[0].extract() == "<td>USA</td>":
                 print(self.converter.handle(tds[1].extract()))
-
-# def parse(self, response):
-#     trs = response.css("tr")#.extract()
-#     for tr in trs:
-#         tds = tr.css("td")
-#         if tds and tds[0] == "USA":
-#             print(tds[1].extract())
